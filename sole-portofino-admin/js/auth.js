@@ -6,8 +6,8 @@ let supabase = null;
 async function initializeSupabase() {
     // For Cloudflare Pages, environment variables are injected at build time
     // These placeholders will be replaced by Cloudflare
-    const SUPABASE_URL = '__SUPABASE_URL__';
-    const SUPABASE_ANON_KEY = '__SUPABASE_ANON_KEY__';
+    const SUPABASE_URL = 'https://npfwslczctdocnkyntpf.supabase.co';
+    const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5wZndzbGN6Y3Rkb2Nua3ludHBmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzI4NjE3ODUsImV4cCI6MjA0ODQzNzc4NX0.zONJoOsqEJrfBp8wjsxA3tOz7DMxcLtMnfJQGJo4Zao';
     
     // Check if placeholders were replaced
     if (SUPABASE_URL.includes('__') || SUPABASE_ANON_KEY.includes('__')) {
