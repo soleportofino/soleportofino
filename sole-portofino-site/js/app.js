@@ -492,7 +492,7 @@ window.addProductToCart = function() {
     addToCart({
         id: 'signature-tote',
         name: 'Sole Portofino Signature Gingham Tote',
-        price: 2999,
+        price: 350,
         image: 'images/product-main.jpg'
     });
 };
