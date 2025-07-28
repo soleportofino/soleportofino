@@ -847,3 +847,91 @@ a:hover {
     0% { background-position: 200% 0; }
     100% { background-position: -200% 0; }
 }
+
+/* Shopify Buy Button Customizations */
+.shopify-buy__product {
+    background: white !important;
+    border: 1px solid rgba(0, 75, 141, 0.1) !important;
+    border-radius: 16px !important;
+    overflow: hidden !important;
+    transition: all 0.3s ease !important;
+}
+
+.shopify-buy__product:hover {
+    transform: translateY(-4px) !important;
+    box-shadow: var(--shadow-medium) !important;
+}
+
+.shopify-buy__product__variant-img {
+    border-radius: 12px 12px 0 0 !important;
+}
+
+.shopify-buy__product__title {
+    font-family: var(--font-body) !important;
+    font-size: 1rem !important;
+    font-weight: 500 !important;
+    color: var(--navy) !important;
+    margin: 0.75rem 0 0.5rem !important;
+}
+
+.shopify-buy__product__price {
+    font-family: var(--font-body) !important;
+    font-size: 1.125rem !important;
+    font-weight: 600 !important;
+    color: var(--navy) !important;
+}
+
+.shopify-buy__btn {
+    background-color: var(--coral) !important;
+    color: white !important;
+    border: none !important;
+    padding: 0.75rem 1.5rem !important;
+    font-family: var(--font-body) !important;
+    font-size: 0.875rem !important;
+    font-weight: 500 !important;
+    border-radius: 12px !important;
+    transition: all 0.3s ease !important;
+    text-transform: none !important;
+}
+
+.shopify-buy__btn:hover {
+    background-color: #E14330 !important;
+    transform: translateY(-2px) !important;
+}
+
+/* Cart Styles */
+.shopify-buy-frame--cart {
+    background: var(--off-white) !important;
+    font-family: var(--font-body) !important;
+}
+
+.shopify-buy__cart__title {
+    color: var(--navy) !important;
+    font-family: var(--font-heading) !important;
+}
+
+.shopify-buy__cart-toggle {
+    background-color: var(--coral) !important;
+    border-radius: 50% !important;
+    width: 60px !important;
+    height: 60px !important;
+    right: 2rem !important;
+    bottom: 2rem !important;
+    box-shadow: var(--shadow-medium) !important;
+}
+
+.shopify-buy__cart-toggle:hover {
+    background-color: #E14330 !important;
+    transform: scale(1.1) !important;
+}
+
+/* Responsive adjustments for Shopify grid */
+@media (max-width: 768px) {
+    .shopify-buy__product {
+        margin: 0 0.5rem 1rem !important;
+    }
+    
+    #collection-component-1753712095095 {
+        padding: 0 1rem;
+    }
+}

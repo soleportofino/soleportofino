@@ -10,6 +10,26 @@ document.addEventListener('DOMContentLoaded', function() {
     initSmoothScroll();
     initHeaderEffects();
     initInstagramHover();
+    
+    // Handle Shopify Buy Button integration
+    setTimeout(() => {
+        if (window.ShopifyBuy) {
+            // Hide our custom cart toggle when Shopify cart is available
+            const customCartToggle = document.getElementById('cart-toggle');
+            if (customCartToggle) {
+                customCartToggle.style.display = 'none';
+            }
+            
+            // Mark bestsellers section as using Shopify
+            const shopifyCollection = document.querySelector('#collection-component-1753712095095');
+            if (shopifyCollection) {
+                const parentSection = shopifyCollection.closest('.section');
+                if (parentSection) {
+                    parentSection.classList.add('shopify-powered');
+                }
+            }
+        }
+    }, 1500);
 });
 
 // Mobile Menu with Overlay
