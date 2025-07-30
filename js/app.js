@@ -128,23 +128,22 @@ function initHeaderEffects() {
     });
 }
 
-// Buy Button - PayTR Integration Placeholder
+// Shopify Integration Handler
 function initBuyButton() {
-    const buyButton = document.getElementById('buyButton');
-    
-    if (!buyButton) return;
-    
-    buyButton.addEventListener('click', function() {
-        // PayTR integration would go here
-        // For now, show a notification
-        showNotification('Yönlendiriliyorsunuz...');
-        
-        // Simulate redirect to payment
-        setTimeout(() => {
-            // window.location.href = 'https://paytr.com/...';
-            showNotification('PayTR entegrasyonu yakında eklenecek');
-        }, 1000);
-    });
+    // Wait for Shopify to load
+    setTimeout(() => {
+        // Check if Shopify cart exists
+        if (window.ShopifyBuy && window.ShopifyBuy.UI) {
+            console.log('Shopify Buy Button loaded successfully');
+            
+            // Add custom event listeners if needed
+            document.addEventListener('click', function(e) {
+                if (e.target.classList.contains('shopify-buy__btn')) {
+                    showNotification('Ürün sepete eklendi');
+                }
+            });
+        }
+    }, 2000);
 }
 
 // Scroll Animations

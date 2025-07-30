@@ -1,0 +1,387 @@
+/* Sole Portofino - Zodiac Collection Minimal Design */
+
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Root Variables */
+:root {
+    --white: #FFFFFF;
+    --black: #111111;
+    --gray: #666666;
+    --light-gray: #F5F5F5;
+    --soft-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+    --hover-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Base Styles */
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Playfair Display', 'Didot', serif;
+    color: var(--black);
+    background-color: var(--white);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Header Styles */
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--white);
+    z-index: 1000;
+    padding: 20px;
+    border-bottom: 1px solid var(--light-gray);
+}
+
+.header-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-logo {
+    font-size: 1.25rem;
+    font-weight: 400;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+.cart-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    color: var(--black);
+    transition: opacity 0.3s ease;
+}
+
+.cart-toggle:hover {
+    opacity: 0.6;
+}
+
+.cart-icon {
+    width: 24px;
+    height: 24px;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 400;
+    letter-spacing: 0.05em;
+}
+
+/* Hero Section - Single Video */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: var(--light-gray);
+    margin-top: 72px; /* Account for fixed header */
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.hero-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+}
+
+/* Product Gallery */
+.product-gallery {
+    padding: 80px 20px;
+    background-color: var(--white);
+}
+
+/* Product Grid */
+.product-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+/* Product Card */
+.product-card {
+    text-align: center;
+}
+
+.product-image {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 20px;
+    background-color: var(--light-gray);
+    aspect-ratio: 4/3;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.05);
+}
+
+.product-title {
+    font-size: 1.25rem;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    color: var(--black);
+}
+
+.product-price {
+    font-size: 1rem;
+    color: var(--gray);
+    margin-bottom: 20px;
+}
+
+.product-image {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 30px;
+    transition: transform 0.3s ease;
+}
+
+.product-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.02);
+}
+
+.zodiac-name {
+    font-size: 1.125rem;
+    font-weight: 400;
+    letter-spacing: 0.2em;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.zodiac-tagline {
+    font-style: italic;
+    font-size: 0.95rem;
+    color: var(--gray);
+    margin-bottom: 16px;
+    letter-spacing: 0.03em;
+}
+
+.product-price {
+    font-size: 1.125rem;
+    margin-bottom: 24px;
+    letter-spacing: 0.05em;
+}
+
+/* Buy Button Container */
+.buy-button-container {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Buy Button Styles */
+.buy-button {
+    font-family: 'Playfair Display', serif;
+    background-color: var(--white);
+    color: var(--black);
+    border: 1px solid var(--black);
+    border-radius: 2px;
+    padding: 12px 40px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    width: 100%;
+    max-width: 200px;
+}
+
+.buy-button:hover {
+    background-color: var(--black);
+    color: var(--white);
+    transform: translateY(-1px);
+}
+
+/* Footer */
+.minimal-footer {
+    padding: 80px 20px;
+    text-align: center;
+    border-top: 1px solid var(--light-gray);
+}
+
+.minimal-footer p {
+    font-style: italic;
+    color: var(--gray);
+    font-size: 0.875rem;
+    letter-spacing: 0.05em;
+}
+
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .site-header {
+        padding: 16px 20px;
+    }
+    
+    .site-logo {
+        font-size: 1.125rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        height: 70vh;
+        margin-top: 60px;
+    }
+    
+    .product-gallery {
+        padding: 60px 15px;
+    }
+    
+    /* Product grid for mobile */
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    .product-title {
+        font-size: 1rem;
+    }
+    
+    .product-price {
+        font-size: 0.875rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .site-header {
+        padding: 12px 15px;
+    }
+    
+    .site-logo {
+        font-size: 1rem;
+        letter-spacing: 0.1em;
+    }
+    
+    .cart-icon {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .hero {
+        height: 50vh;
+        margin-top: 50px;
+    }
+    
+    .product-gallery {
+        padding: 40px 10px;
+    }
+    
+    /* Mobile product grid */
+    .product-grid {
+        gap: 15px;
+    }
+    
+    .product-title {
+        font-size: 0.875rem;
+    }
+    
+    .product-price {
+        font-size: 0.75rem;
+        margin-bottom: 15px;
+    }
+    
+    .minimal-footer {
+        padding: 40px 15px;
+    }
+    
+    .minimal-footer p {
+        font-size: 0.75rem;
+    }
+}
+
+/* Loading State */
+.product-image {
+    background-color: var(--light-gray);
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-image img.loaded {
+    animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Disable text selection on price */
+.product-price {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Smooth hover transitions */
+a, button {
+    transition: all 0.3s ease;
+}
+
+/* Remove focus outlines but maintain accessibility */
+*:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(17, 17, 17, 0.1);
+}
+
+/* Print styles */
+@media print {
+    .hero-video,
+    .buy-button-container,
+    .shopify-buy-frame--toggle {
+        display: none !important;
+    }
+}

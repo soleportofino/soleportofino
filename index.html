@@ -3,176 +3,128 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sole Portofino - Zamansız Bir Yaz Stili</title>
-    <meta name="description" content="Portofino'nun büyüleyici sahillerinden ilham alan, el işçiliğiyle üretilmiş lüks plaj çantası. Sınırlı üretim.">
-    
-    <!-- Open Graph -->
-    <meta property="og:title" content="Sole Portofino - Lüks Plaj Çantası">
-    <meta property="og:description" content="İtalyan el işçiliği ve Akdeniz ruhuyla tasarlanan zamansız plaj çantası">
-    <meta property="og:image" content="/images/product-hero.jpg">
-    <meta property="og:type" content="website">
+    <title>Sole Portofino - Luxury Zodiac Collection</title>
+    <meta name="description" content="Luxury zodiac-inspired tote bag collection by Sole Portofino">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
     
     <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/zodiac-style.css">
     
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="images/logo.svg">
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <nav class="nav">
-                <a href="#" class="logo">Sole Portofino</a>
-                <ul class="nav-links">
-                    <li><a href="#about">Hakkımızda</a></li>
-                    <li><a href="#contact">İletişim</a></li>
-                </ul>
-                <button class="mobile-menu-toggle" aria-label="Menü">
-                    <span></span>
-                    <span></span>
-                </button>
-            </nav>
+    <!-- Header with Cart Button -->
+    <header class="site-header">
+        <div class="header-container">
+            <h1 class="site-logo">SOLE PORTOFINO</h1>
+            <button class="cart-toggle" aria-label="Toggle Cart">
+                <svg class="cart-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M9 2L6 9H22L19 2H9Z"></path>
+                    <path d="M6 9H6.01"></path>
+                    <path d="M6 9V22H18V9"></path>
+                    <path d="M10 13V18"></path>
+                    <path d="M14 13V18"></path>
+                </svg>
+            </button>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="hero-image">
-            <img src="images/placeholder.svg" alt="Sole Portofino Lifestyle" loading="eager">
-        </div>
-        <div class="hero-content">
-            <h1 class="hero-title">Sole Portofino</h1>
-            <p class="hero-tagline">Zamansız bir yaz stili</p>
-            <a href="#product" class="hero-cta">Keşfet</a>
+    <!-- Hero Section with Single Video -->
+    <section class="hero">
+        <div class="video-container">
+            <video class="hero-video" autoplay muted loop playsinline>
+                <source src="fotos/hWZa8LxPPKysQMXtKaX2C_video.mp4" type="video/mp4">
+            </video>
         </div>
     </section>
 
-    <!-- Product Section -->
-    <section class="product" id="product">
-        <div class="container">
-            <div class="product-grid">
-                <!-- Product Images -->
-                <div class="product-images">
-                    <div class="main-image">
-                        <img src="images/product-main.jpg" alt="Sole Portofino Plaj Çantası" id="mainImage">
-                    </div>
-                    <div class="image-thumbnails">
-                        <img src="images/product-main.jpg" alt="Ürün Görünüm 1" class="thumbnail active" data-image="images/product-main.jpg">
-                        <img src="images/product-angles.jpg" alt="Ürün Görünüm 2" class="thumbnail" data-image="images/product-angles.jpg">
-                        <img src="images/placeholder.svg" alt="Ürün Görünüm 3" class="thumbnail" data-image="images/placeholder.svg">
-                        <img src="images/placeholder.svg" alt="Detay Görünüm" class="thumbnail" data-image="images/placeholder.svg">
-                    </div>
+    <!-- Product Collection -->
+    <section class="product-gallery">
+        <div class="product-grid">
+            <!-- Aries -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="fotos/aries.png" alt="Aries Tote Bag" loading="lazy">
                 </div>
-
-                <!-- Product Info -->
-                <div class="product-info">
-                    <h2 class="product-title">Portofino Plaj Çantası</h2>
-                    <p class="product-price">₺8,500</p>
-                    
-                    <div class="product-description">
-                        <p>İtalyan sahil kasabalarının zarafetinden ilham alan bu özel tasarım, 
-                        yaz stilinize zamansız bir dokunuş katıyor.</p>
-                        
-                        <p>Doğal hasır ve premium deri detaylarla el işçiliğiyle üretilen çantamız, 
-                        hem plajda hem de şehirde sizinle.</p>
-                        
-                        <ul class="product-features">
-                            <li>El örümü doğal hasır gövde</li>
-                            <li>İtalyan derisi saplar ve detaylar</li>
-                            <li>İç keten astar ve fermuarlı cep</li>
-                            <li>Sınırlı üretim - sadece 50 adet</li>
-                        </ul>
-                    </div>
-
-                    <button class="buy-button" id="buyButton">Satın Al</button>
-                    
-                    <div class="product-meta">
-                        <p>Kargo: 2-3 iş günü içinde teslim</p>
-                        <p>14 gün içinde koşulsuz iade garantisi</p>
-                    </div>
-                </div>
+                <h3 class="product-title">Aries</h3>
+                <p class="product-price">1,250TL</p>
+                <button class="buy-button" data-product="aries">Buy</button>
             </div>
-        </div>
-    </section>
 
-    <!-- About Section -->
-    <section class="about" id="about">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-text">
-                    <h2 class="section-title">Hikayemiz</h2>
-                    <p class="lead">Bir yaz sabahı, Portofino'nun dar sokaklarında başlayan yolculuk...</p>
-                    
-                    <p>Akdeniz'in masmavi sularına bakan küçük bir atölyede, geleneksel İtalyan 
-                    el sanatları ile modern tasarımı bir araya getiriyoruz. Her bir Sole Portofino 
-                    çantası, ustalarımızın ellerinde şekilleniyor ve sadece sizin için üretiliyor.</p>
-                    
-                    <p>Sınırlı sayıda ürettiğimiz koleksiyonumuz, sürdürülebilir malzemeler ve 
-                    geleneksel tekniklerle hayat buluyor. Amacımız, sadece bir aksesuar değil, 
-                    yazlarınıza eşlik edecek zamansız bir yoldaş sunmak.</p>
-                    
-                    <blockquote class="quote">
-                        "Lüks, gösterişte değil, detaylarda ve el emeğinde saklıdır."
-                    </blockquote>
+            <!-- Taurus -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="fotos/taurus.png" alt="Taurus Tote Bag" loading="lazy">
                 </div>
-                
-                <div class="about-image">
-                    <img src="images/placeholder.svg" alt="El İşçiliği" loading="lazy">
-                </div>
+                <h3 class="product-title">Taurus</h3>
+                <p class="product-price">1,250TL</p>
+                <button class="buy-button" data-product="taurus">Buy</button>
             </div>
-        </div>
-    </section>
 
-    <!-- Contact Section -->
-    <section class="contact" id="contact">
-        <div class="container">
-            <h2 class="section-title">İletişim</h2>
-            <div class="contact-content">
-                <p>Sorularınız için bizimle iletişime geçebilirsiniz.</p>
-                <a href="mailto:info@soleportofino.com" class="contact-email">info@soleportofino.com</a>
-                <div class="social-links">
-                    <a href="https://instagram.com/soleportofino" target="_blank" rel="noopener" aria-label="Instagram">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                        </svg>
-                    </a>
+            <!-- Cancer -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="fotos/cancer.png" alt="Cancer Tote Bag" loading="lazy">
                 </div>
+                <h3 class="product-title">Cancer</h3>
+                <p class="product-price">1,250TL</p>
+                <button class="buy-button" data-product="cancer">Buy</button>
+            </div>
+
+            <!-- Leo -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="fotos/leo.png" alt="Leo Tote Bag" loading="lazy">
+                </div>
+                <h3 class="product-title">Leo</h3>
+                <p class="product-price">1,250TL</p>
+                <button class="buy-button" data-product="leo">Buy</button>
+            </div>
+
+            <!-- Virgo -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="fotos/vigo.png" alt="Virgo Tote Bag" loading="lazy">
+                </div>
+                <h3 class="product-title">Virgo</h3>
+                <p class="product-price">1,250TL</p>
+                <button class="buy-button" data-product="virgo">Buy</button>
+            </div>
+
+            <!-- Scorpio -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="fotos/scorpio.png" alt="Scorpio Tote Bag" loading="lazy">
+                </div>
+                <h3 class="product-title">Scorpio</h3>
+                <p class="product-price">1,250TL</p>
+                <button class="buy-button" data-product="scorpio">Buy</button>
+            </div>
+
+            <!-- Sagittarius -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="fotos/saggitraius.png" alt="Sagittarius Tote Bag" loading="lazy">
+                </div>
+                <h3 class="product-title">Sagittarius</h3>
+                <p class="product-price">1,250TL</p>
+                <button class="buy-button" data-product="sagittarius">Buy</button>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <a href="#" class="footer-logo">Sole Portofino</a>
-                <div class="footer-links">
-                    <a href="/kvkk.html">KVKK</a>
-                    <a href="/privacy.html">Gizlilik</a>
-                    <a href="/returns.html">İade Politikası</a>
-                </div>
-                <p class="copyright">© 2024 Sole Portofino. Tüm hakları saklıdır.</p>
-            </div>
-        </div>
+    <footer class="minimal-footer">
+        <p>© Sole Portofino · Inspired by the stars</p>
     </footer>
 
-    <!-- Mobile Menu -->
-    <div class="mobile-menu">
-        <nav class="mobile-nav">
-            <a href="#about">Hakkımızda</a>
-            <a href="#contact">İletişim</a>
-        </nav>
-    </div>
+    <!-- Minimal Scripts -->
+    <script src="js/zodiac-app.js"></script>
 
-    <!-- Scripts -->
-    <script src="js/app.js"></script>
 </body>
 </html>
